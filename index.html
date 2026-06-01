@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Future 2026 — Конференция</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700;900&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CUSTOM CURSOR
+  ═══════════════════════════════════════════ -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAVBAR
+  ═══════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+      <div class="container-xxl">
+
+        <!-- Logo -->
+        <a class="navbar-brand site-logo" href="#">
+          <span class="logo-bracket">[</span>FF<span class="logo-year">26</span><span class="logo-bracket">]</span>
+        </a>
+
+        <!-- Burger toggler -->
+        <button
+          class="navbar-toggler burger-btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="#program">Программа</a></li>
+            <li class="nav-item"><a class="nav-link" href="#speakers">Спикеры</a></li>
+            <li class="nav-item"><a class="nav-link" href="#stats">О нас</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tickets">Билеты</a></li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-buy-header" href="#register">
+                Купить билет <i class="bi bi-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="container-xxl hero-inner">
+      <div class="hero-meta-tag">
+        <span class="meta-dot"></span>
+        <span class="font-mono">15–16 июля 2026</span>
+        <span class="meta-sep">·</span>
+        <span class="font-mono">Москва · ЦМТ</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-line1" data-glitch="FRONTEND">FRONTEND</span>
+        <span class="hero-title-line2">FUTURE</span>
+        <span class="hero-title-year">2026</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Конференция, где <em>рождается</em> веб будущего
+      </p>
+
+      <div class="hero-actions">
+        <a href="#register" class="btn btn-hero-primary">
+          Купить билет <i class="bi bi-arrow-right-circle-fill"></i>
+        </a>
+        <a href="#program" class="btn btn-hero-ghost">
+          <i class="bi bi-calendar3"></i> Программа
+        </a>
+      </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span class="font-mono">scroll</span>
+      <div class="scroll-bar"><div class="scroll-bar-inner"></div></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       TICKER STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="ticker-strip" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Frontend Future 2026</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>Москва · 15–16 апреля</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>40+ спикеров</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>1200+ участников</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>React · Vue · Web APIs</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>AI-разработка</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>Performance · DX</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <!-- duplicate for seamless loop -->
+      <span>Frontend Future 2026</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>Москва · 15–16 апреля</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>40+ спикеров</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>1200+ участников</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>React · Vue · Web APIs</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>AI-разработка</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+      <span>Performance · DX</span><span class="t-sep"><i class="bi bi-diamond-fill"></i></span>
+    </div>
+  </div>
+
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         PROGRAM SECTION
+    ═══════════════════════════════════════════ -->
+    <section class="section-block program-section" id="program">
+      <div class="container-xxl">
+
+        <div class="section-header reveal">
+          <span class="section-eyebrow font-mono">// 02</span>
+          <h2 class="section-title">Программа</h2>
+          <p class="section-sub">Два насыщенных дня — одна траектория роста</p>
+        </div>
+
+        <!-- Day Tabs -->
+        <ul class="nav program-tabs reveal" id="programTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="program-tab-btn active"
+              id="day1-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#day1-pane"
+              type="button"
+              role="tab"
+              aria-controls="day1-pane"
+              aria-selected="true"
+            >
+              <i class="bi bi-calendar-event"></i>
+              День 1 · 15 июля
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="program-tab-btn"
+              id="day2-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#day2-pane"
+              type="button"
+              role="tab"
+              aria-controls="day2-pane"
+              aria-selected="false"
+            >
+              <i class="bi bi-calendar-event"></i>
+              День 2 · 16 июля
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content program-tab-content">
+
+          <!-- DAY 1 -->
+          <div class="tab-pane fade show active" id="day1-pane" role="tabpanel" aria-labelledby="day1-tab">
+            <div class="accordion program-accordion reveal" id="accordionDay1">
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d1-i1"
+                    aria-expanded="false" aria-controls="d1-i1">
+                    <span class="prog-time font-mono">09:00</span>
+                    <span class="prog-title">Регистрация и приветственный кофе</span>
+                    <span class="prog-tag">
+                      <i class="bi bi-cup-hot"></i> Холл А
+                    </span>
+                  </button>
+                </h2>
+                <div id="d1-i1" class="accordion-collapse collapse" data-bs-parent="#accordionDay1">
+                  <div class="accordion-body prog-body">
+                    <p>Встреча участников, получение бейджей и раздаточных материалов. Нетворкинг в неформальной обстановке.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 60 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Холл А</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d1-i2"
+                    aria-expanded="false" aria-controls="d1-i2">
+                    <span class="prog-time font-mono">10:00</span>
+                    <span class="prog-title">Открытие. Состояние Frontend 2026</span>
+                    <span class="prog-tag prog-tag--keynote">
+                      <i class="bi bi-stars"></i> Keynote
+                    </span>
+                  </button>
+                </h2>
+                <div id="d1-i2" class="accordion-collapse collapse" data-bs-parent="#accordionDay1">
+                  <div class="accordion-body prog-body">
+                    <p>Ключевой доклад от организаторов конференции. Обзор главных трендов в мире веб-разработки, обновления стандартов W3C и TC39, плюс анонс самых горячих тем конференции.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 60 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Главная сцена</span>
+                      <span class="prog-speaker-ref"><i class="bi bi-person"></i> Команда Frontend Future</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d1-i3"
+                    aria-expanded="false" aria-controls="d1-i3">
+                    <span class="prog-time font-mono">11:00</span>
+                    <span class="prog-title">React Server Components: глубокое погружение</span>
+                    <span class="prog-tag">
+                      <i class="bi bi-code-slash"></i> Зал 1
+                    </span>
+                  </button>
+                </h2>
+                <div id="d1-i3" class="accordion-collapse collapse" data-bs-parent="#accordionDay1">
+                  <div class="accordion-body prog-body">
+                    <p>Alex Chen разберёт архитектуру RSC, паттерны стриминга и реальные кейсы применения на production-проектах. Live-кодинг и Q&A в конце сессии.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 75 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Зал 1</span>
+                      <span class="prog-speaker-ref"><i class="bi bi-person"></i> Alex Chen (Vercel)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d1-i4"
+                    aria-expanded="false" aria-controls="d1-i4">
+                    <span class="prog-time font-mono">12:30</span>
+                    <span class="prog-title">Обед и нетворкинг</span>
+                    <span class="prog-tag">
+                      <i class="bi bi-people"></i> Холл В
+                    </span>
+                  </button>
+                </h2>
+                <div id="d1-i4" class="accordion-collapse collapse" data-bs-parent="#accordionDay1">
+                  <div class="accordion-body prog-body">
+                    <p>Шведский стол в Холле В. Общение с экспертами и другими участниками в неформальной атмосфере.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 90 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Холл В</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d1-i5"
+                    aria-expanded="false" aria-controls="d1-i5">
+                    <span class="prog-time font-mono">14:00</span>
+                    <span class="prog-title">Web Performance: метрики нового поколения</span>
+                    <span class="prog-tag">
+                      <i class="bi bi-speedometer2"></i> Зал 1
+                    </span>
+                  </button>
+                </h2>
+                <div id="d1-i5" class="accordion-collapse collapse" data-bs-parent="#accordionDay1">
+                  <div class="accordion-body prog-body">
+                    <p>John Park о новых Performance API, INP как замене FID, Speculation Rules API и практических методах оптимизации Core Web Vitals. Разбор реальных кейсов с цифрами.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 75 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Зал 1</span>
+                      <span class="prog-speaker-ref"><i class="bi bi-person"></i> John Park (Google Chrome)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d1-i6"
+                    aria-expanded="false" aria-controls="d1-i6">
+                    <span class="prog-time font-mono">15:30</span>
+                    <span class="prog-title">Панельная дискуссия: микрофронтенды в 2026</span>
+                    <span class="prog-tag prog-tag--panel">
+                      <i class="bi bi-chat-square-text"></i> Главная сцена
+                    </span>
+                  </button>
+                </h2>
+                <div id="d1-i6" class="accordion-collapse collapse" data-bs-parent="#accordionDay1">
+                  <div class="accordion-body prog-body">
+                    <p>Lisa Novak, David Kim и приглашённые эксперты обсуждают практику микрофронтендов: Module Federation, Single-SPA, изоляция стилей, проблемы командного взаимодействия.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 60 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Главная сцена</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d1-i7"
+                    aria-expanded="false" aria-controls="d1-i7">
+                    <span class="prog-time font-mono">17:00</span>
+                    <span class="prog-title">Вечерний нетворкинг</span>
+                    <span class="prog-tag">
+                      <i class="bi bi-balloon-heart"></i> Терраса
+                    </span>
+                  </button>
+                </h2>
+                <div id="d1-i7" class="accordion-collapse collapse" data-bs-parent="#accordionDay1">
+                  <div class="accordion-body prog-body">
+                    <p>Закрытый ужин для участников конференции. Живая музыка, коктейли и неограниченные возможности для общения с ведущими специалистами отрасли.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 3 часа</span>
+                      <span><i class="bi bi-geo-alt"></i> Терраса</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- /day1-pane -->
+
+          <!-- DAY 2 -->
+          <div class="tab-pane fade" id="day2-pane" role="tabpanel" aria-labelledby="day2-tab">
+            <div class="accordion program-accordion reveal" id="accordionDay2">
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d2-i1"
+                    aria-expanded="false" aria-controls="d2-i1">
+                    <span class="prog-time font-mono">09:30</span>
+                    <span class="prog-title">Утренний кофе и регистрация</span>
+                    <span class="prog-tag"><i class="bi bi-cup-hot"></i> Холл А</span>
+                  </button>
+                </h2>
+                <div id="d2-i1" class="accordion-collapse collapse" data-bs-parent="#accordionDay2">
+                  <div class="accordion-body prog-body">
+                    <p>Второй день начинается с заряда бодрости и новых знакомств перед насыщенной программой.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 30 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Холл А</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d2-i2"
+                    aria-expanded="false" aria-controls="d2-i2">
+                    <span class="prog-time font-mono">10:00</span>
+                    <span class="prog-title">AI-ассистированная разработка: реальные практики</span>
+                    <span class="prog-tag prog-tag--keynote"><i class="bi bi-stars"></i> Keynote</span>
+                  </button>
+                </h2>
+                <div id="d2-i2" class="accordion-collapse collapse" data-bs-parent="#accordionDay2">
+                  <div class="accordion-body prog-body">
+                    <p>Emma Torres о том, как AI-инструменты меняют рабочий процесс разработчика: Copilot в 2026, агентные возможности, качество кода и когнитивная нагрузка на команды.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 75 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Главная сцена</span>
+                      <span class="prog-speaker-ref"><i class="bi bi-person"></i> Emma Torres (GitHub)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d2-i3"
+                    aria-expanded="false" aria-controls="d2-i3">
+                    <span class="prog-time font-mono">11:30</span>
+                    <span class="prog-title">Дизайн-системы в масштабе</span>
+                    <span class="prog-tag"><i class="bi bi-palette"></i> Зал 2</span>
+                  </button>
+                </h2>
+                <div id="d2-i3" class="accordion-collapse collapse" data-bs-parent="#accordionDay2">
+                  <div class="accordion-body prog-body">
+                    <p>Maria Volkov расскажет, как выстраивать и поддерживать дизайн-системы в больших командах: токены, версионирование, документация и процессы синхронизации с разработкой.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 60 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Зал 2</span>
+                      <span class="prog-speaker-ref"><i class="bi bi-person"></i> Maria Volkov (Figma)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d2-i4"
+                    aria-expanded="false" aria-controls="d2-i4">
+                    <span class="prog-time font-mono">13:00</span>
+                    <span class="prog-title">Обед</span>
+                    <span class="prog-tag"><i class="bi bi-people"></i> Холл В</span>
+                  </button>
+                </h2>
+                <div id="d2-i4" class="accordion-collapse collapse" data-bs-parent="#accordionDay2">
+                  <div class="accordion-body prog-body">
+                    <p>Шведский стол. Свободное время для общения и осмотра выставочных стендов партнёров.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 60 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Холл В</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d2-i5"
+                    aria-expanded="false" aria-controls="d2-i5">
+                    <span class="prog-time font-mono">14:00</span>
+                    <span class="prog-title">Build Tools: что ждёт нас дальше</span>
+                    <span class="prog-tag"><i class="bi bi-tools"></i> Зал 1</span>
+                  </button>
+                </h2>
+                <div id="d2-i5" class="accordion-collapse collapse" data-bs-parent="#accordionDay2">
+                  <div class="accordion-body prog-body">
+                    <p>David Kim о будущем инструментов сборки: Rolldown, Vite 7, оптимизация для больших монорепозиториев, нативный ESM и интеграция с рантаймами Deno и Bun.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 75 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Зал 1</span>
+                      <span class="prog-speaker-ref"><i class="bi bi-person"></i> David Kim (Vite)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d2-i6"
+                    aria-expanded="false" aria-controls="d2-i6">
+                    <span class="prog-time font-mono">15:30</span>
+                    <span class="prog-title">Lightning Talks: 6 докладов × 10 минут</span>
+                    <span class="prog-tag prog-tag--panel"><i class="bi bi-lightning"></i> Главная сцена</span>
+                  </button>
+                </h2>
+                <div id="d2-i6" class="accordion-collapse collapse" data-bs-parent="#accordionDay2">
+                  <div class="accordion-body prog-body">
+                    <p>Молниеносный формат: шесть участников делятся нестандартными решениями, личными открытиями и экспериментами из реальной практики.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 75 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Главная сцена</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item prog-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed prog-btn" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#d2-i7"
+                    aria-expanded="false" aria-controls="d2-i7">
+                    <span class="prog-time font-mono">16:30</span>
+                    <span class="prog-title">Закрытие конференции</span>
+                    <span class="prog-tag prog-tag--keynote"><i class="bi bi-award"></i> Финал</span>
+                  </button>
+                </h2>
+                <div id="d2-i7" class="accordion-collapse collapse" data-bs-parent="#accordionDay2">
+                  <div class="accordion-body prog-body">
+                    <p>Итоги двух дней, розыгрыш призов среди участников, объявление дат следующей конференции и финальный нетворкинг.</p>
+                    <div class="prog-body-meta">
+                      <span><i class="bi bi-clock"></i> 60 мин</span>
+                      <span><i class="bi bi-geo-alt"></i> Главная сцена</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- /day2-pane -->
+
+        </div><!-- /tab-content -->
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SPEAKERS SECTION
+    ═══════════════════════════════════════════ -->
+    <section class="section-block speakers-section" id="speakers">
+      <div class="container-xxl">
+
+        <div class="section-header reveal">
+          <span class="section-eyebrow font-mono">// 03</span>
+          <h2 class="section-title">Спикеры</h2>
+          <p class="section-sub">40+ экспертов из ведущих компаний мира</p>
+        </div>
+
+        <div class="row g-4 speakers-grid">
+
+          <!-- Speaker 1 -->
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="speaker-card" data-bs-toggle="modal" data-bs-target="#speakerModal"
+              data-name="Alex Chen"
+              data-role="Principal Engineer"
+              data-company="Vercel"
+              data-topic="React Server Components: глубокое погружение"
+              data-initials="AC"
+              data-avatar-class="av-1"
+              data-bio="Алекс — инженер-эксперт в Vercel с опытом более 12 лет. Один из ключевых контрибьюторов в экосистему React и Next.js. Специализируется на серверном рендеринге, стриминге и производительности больших приложений."
+              data-talk="Доклад охватывает архитектуру React Server Components, паттерны стриминга данных и реальные кейсы применения на production-проектах. Включает live-кодинг, разбор ошибок и открытую Q&A сессию.">
+              <div class="speaker-card__top">
+                <div class="speaker-avatar av-1">AC</div>
+                <div class="speaker-badge">
+                  <i class="bi bi-play-circle-fill"></i> Смотреть
+                </div>
+              </div>
+              <div class="speaker-card__body">
+                <h3 class="speaker-name">Alex Chen</h3>
+                <p class="speaker-role">Principal Engineer <span>·</span> Vercel</p>
+                <p class="speaker-topic">
+                  <i class="bi bi-chat-square-quote"></i>
+                  React Server Components
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Speaker 2 -->
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="speaker-card" data-bs-toggle="modal" data-bs-target="#speakerModal"
+              data-name="Maria Volkov"
+              data-role="Head of UX"
+              data-company="Figma"
+              data-topic="Дизайн-системы в масштабе"
+              data-initials="MV"
+              data-avatar-class="av-2"
+              data-bio="Мария руководит командой UX в Figma, отвечая за разработку инструментов для дизайнеров мирового уровня. До Figma — Head of Design в Dropbox и Airbnb. Автор курса по построению дизайн-систем на ADPList."
+              data-talk="Как выстраивать и поддерживать дизайн-системы в больших командах: токены, версионирование, документация и процессы синхронизации дизайна с разработкой. Реальные кейсы из практики Figma.">
+              <div class="speaker-card__top">
+                <div class="speaker-avatar av-2">MV</div>
+                <div class="speaker-badge">
+                  <i class="bi bi-play-circle-fill"></i> Смотреть
+                </div>
+              </div>
+              <div class="speaker-card__body">
+                <h3 class="speaker-name">Maria Volkov</h3>
+                <p class="speaker-role">Head of UX <span>·</span> Figma</p>
+                <p class="speaker-topic">
+                  <i class="bi bi-chat-square-quote"></i>
+                  Design Systems at Scale
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Speaker 3 -->
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="speaker-card" data-bs-toggle="modal" data-bs-target="#speakerModal"
+              data-name="John Park"
+              data-role="Staff Engineer"
+              data-company="Google Chrome"
+              data-topic="Web Performance 2026"
+              data-initials="JP"
+              data-avatar-class="av-3"
+              data-bio="Джон работает над браузерным движком Chromium и является соавтором спецификации Speculation Rules API. Регулярный докладчик на Google I/O и Chrome Dev Summit. Эксперт по Core Web Vitals и Performance API."
+              data-talk="Новые Performance API, INP как замена FID, Speculation Rules API и практические методы оптимизации Core Web Vitals. Разбор реальных кейсов с цифрами до и после оптимизации.">
+              <div class="speaker-card__top">
+                <div class="speaker-avatar av-3">JP</div>
+                <div class="speaker-badge">
+                  <i class="bi bi-play-circle-fill"></i> Смотреть
+                </div>
+              </div>
+              <div class="speaker-card__body">
+                <h3 class="speaker-name">John Park</h3>
+                <p class="speaker-role">Staff Engineer <span>·</span> Google Chrome</p>
+                <p class="speaker-topic">
+                  <i class="bi bi-chat-square-quote"></i>
+                  Web Performance 2026
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Speaker 4 -->
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="speaker-card" data-bs-toggle="modal" data-bs-target="#speakerModal"
+              data-name="Lisa Novak"
+              data-role="Frontend Architect"
+              data-company="Spotify"
+              data-topic="Микрофронтенды в 2026"
+              data-initials="LN"
+              data-avatar-class="av-4"
+              data-bio="Лиза отвечает за архитектуру фронтенда в Spotify, управляя командой из 80+ инженеров. Пионер применения Module Federation в production. Контрибьютор в webpack и Rspack."
+              data-talk="Практика микрофронтендов: Module Federation, Single-SPA, изоляция стилей и проблемы командного взаимодействия. Что реально работает в production у Spotify и какие ловушки нас ждут.">
+              <div class="speaker-card__top">
+                <div class="speaker-avatar av-4">LN</div>
+                <div class="speaker-badge">
+                  <i class="bi bi-play-circle-fill"></i> Смотреть
+                </div>
+              </div>
+              <div class="speaker-card__body">
+                <h3 class="speaker-name">Lisa Novak</h3>
+                <p class="speaker-role">Frontend Architect <span>·</span> Spotify</p>
+                <p class="speaker-topic">
+                  <i class="bi bi-chat-square-quote"></i>
+                  Micro-Frontends
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Speaker 5 -->
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="speaker-card" data-bs-toggle="modal" data-bs-target="#speakerModal"
+              data-name="David Kim"
+              data-role="Creator"
+              data-company="Vite / VoidCI"
+              data-topic="Build Tools: что ждёт нас дальше"
+              data-initials="DK"
+              data-avatar-class="av-5"
+              data-bio="Дэвид — создатель Vite и активный участник экосистемы Rust-инструментов для JavaScript. Автор Rolldown — нового Rust-бандлера, призванного заменить Rollup внутри Vite 7."
+              data-talk="Будущее инструментов сборки: Rolldown, Vite 7, оптимизация для больших монорепозиториев, нативный ESM и интеграция с рантаймами Deno и Bun. Что изменится в вашем dev workflow уже в 2026.">
+              <div class="speaker-card__top">
+                <div class="speaker-avatar av-5">DK</div>
+                <div class="speaker-badge">
+                  <i class="bi bi-play-circle-fill"></i> Смотреть
+                </div>
+              </div>
+              <div class="speaker-card__body">
+                <h3 class="speaker-name">David Kim</h3>
+                <p class="speaker-role">Creator <span>·</span> Vite</p>
+                <p class="speaker-topic">
+                  <i class="bi bi-chat-square-quote"></i>
+                  Build Tools Future
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Speaker 6 -->
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="speaker-card" data-bs-toggle="modal" data-bs-target="#speakerModal"
+              data-name="Emma Torres"
+              data-role="DX Engineer"
+              data-company="GitHub"
+              data-topic="AI-ассистированная разработка"
+              data-initials="ET"
+              data-avatar-class="av-6"
+              data-bio="Эмма специализируется на Developer Experience в GitHub, работая над интеграцией AI-инструментов в рабочий процесс разработчика. Автор исследований о влиянии LLM-ассистентов на качество кода и когнитивную нагрузку команд."
+              data-talk="Как AI-инструменты меняют рабочий процесс: Copilot в 2026, агентные возможности, оценка качества кода и когнитивная нагрузка на команды. Что измерили — и что удивило — в реальных экспериментах GitHub.">
+              <div class="speaker-card__top">
+                <div class="speaker-avatar av-6">ET</div>
+                <div class="speaker-badge">
+                  <i class="bi bi-play-circle-fill"></i> Смотреть
+                </div>
+              </div>
+              <div class="speaker-card__body">
+                <h3 class="speaker-name">Emma Torres</h3>
+                <p class="speaker-role">DX Engineer <span>·</span> GitHub</p>
+                <p class="speaker-topic">
+                  <i class="bi bi-chat-square-quote"></i>
+                  AI-Assisted Development
+                </p>
+              </div>
+            </article>
+          </div>
+
+        </div><!-- /row -->
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SPEAKER MODAL
+    ═══════════════════════════════════════════ -->
+    <div class="modal fade speaker-modal" id="speakerModal" tabindex="-1"
+      aria-labelledby="speakerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content speaker-modal-content">
+          <button type="button" class="speaker-modal-close" data-bs-dismiss="modal" aria-label="Закрыть">
+            <i class="bi bi-x-lg"></i>
+          </button>
+          <div class="speaker-modal-body">
+            <div class="smodal-left">
+              <div class="smodal-avatar" id="smodal-avatar">AC</div>
+              <div class="smodal-info">
+                <h2 class="smodal-name" id="smodal-name">Alex Chen</h2>
+                <p class="smodal-role" id="smodal-role">Principal Engineer · Vercel</p>
+              </div>
+            </div>
+            <div class="smodal-right">
+              <div class="smodal-section">
+                <h4><i class="bi bi-mic-fill"></i> Доклад</h4>
+                <p id="smodal-topic"></p>
+                <p id="smodal-talk"></p>
+              </div>
+              <div class="smodal-section">
+                <h4><i class="bi bi-person-badge"></i> Биография</h4>
+                <p id="smodal-bio"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════
+         STATS + TESTIMONIALS SECTION
+    ═══════════════════════════════════════════ -->
+    <section class="section-block stats-section" id="stats">
+      <div class="container-xxl">
+
+        <div class="section-header reveal">
+          <span class="section-eyebrow font-mono">// 04</span>
+          <h2 class="section-title">Цифры говорят сами</h2>
+        </div>
+
+        <div class="row g-4 stats-grid">
+          <div class="col-6 col-lg-3 reveal">
+            <div class="stat-card">
+              <span class="stat-num" data-target="1200">0</span>
+              <span class="stat-plus">+</span>
+              <p class="stat-label">участников</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="stat-card">
+              <span class="stat-num" data-target="40">0</span>
+              <span class="stat-plus">+</span>
+              <p class="stat-label">спикеров</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="stat-card">
+              <span class="stat-num" data-target="2">0</span>
+              <span class="stat-plus">+</span>
+              <p class="stat-label">дня программы</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="stat-card">
+              <span class="stat-num" data-target="300">0</span>
+              <span class="stat-plus">+</span>
+              <p class="stat-label">кейсов на практике</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials-block reveal">
+          <h2 class="section-title text-center mb-5">Что говорят участники</h2>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-4 reveal">
+              <blockquote class="testimonial-card">
+                <i class="bi bi-quote testimonial-icon"></i>
+                <p>Лучшая техническая конференция, на которой я был. Глубокий контент, ноль воды. После доклада Alex Chen я переписал половину архитектуры нашего проекта.</p>
+                <footer>
+                  <strong>Дмитрий К.</strong>
+                  <span>Senior Frontend Dev, Т-Банк</span>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="col-12 col-md-4 reveal">
+              <blockquote class="testimonial-card">
+                <i class="bi bi-quote testimonial-icon"></i>
+                <p>Наконец-то конференция, которая не превратилась в рекламный бизнес. Спикеры реально знают, о чём говорят — и делятся реальными кейсами, а не слайдами с логотипами.</p>
+                <footer>
+                  <strong>Анна Р.</strong>
+                  <span>UX Lead, Сбер</span>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="col-12 col-md-4 reveal">
+              <blockquote class="testimonial-card">
+                <i class="bi bi-quote testimonial-icon"></i>
+                <p>Уехал с пятью новыми контактами и тремя идеями для нашей инфраструктуры. Нетворкинг здесь — не формальность, а живое профессиональное сообщество.</p>
+                <footer>
+                  <strong>Михаил В.</strong>
+                  <span>Tech Lead, Ozon</span>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         TICKETS SECTION
+    ═══════════════════════════════════════════ -->
+    <section class="section-block tickets-section" id="tickets">
+      <div class="container-xxl">
+
+        <div class="section-header reveal">
+          <span class="section-eyebrow font-mono">// 05</span>
+          <h2 class="section-title">Билеты</h2>
+          <p class="section-sub">Инвестиция в профессиональный рост</p>
+        </div>
+
+        <div class="row g-4 justify-content-center tickets-grid">
+
+          <!-- Online -->
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <div class="ticket-card">
+              <div class="ticket-card__header">
+                <span class="ticket-label">Онлайн</span>
+                <div class="ticket-price">
+                  <span class="ticket-price__amount">2 900</span>
+                  <span class="ticket-price__cur">₽</span>
+                </div>
+              </div>
+              <ul class="ticket-features">
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Онлайн-трансляция всех докладов</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Записи на 30 дней</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Доступ к закрытому чату</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Электронные материалы</li>
+                <li class="feat-no"><i class="bi bi-x-circle"></i> Живое участие</li>
+                <li class="feat-no"><i class="bi bi-x-circle"></i> Нетворкинг-ужин</li>
+                <li class="feat-no"><i class="bi bi-x-circle"></i> Мерч конференции</li>
+              </ul>
+              <a href="#register" class="btn btn-ticket-outline w-100">Выбрать тариф</a>
+            </div>
+          </div>
+
+          <!-- Standard (Featured) -->
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <div class="ticket-card ticket-card--featured">
+              <div class="ticket-card__badge">
+                <i class="bi bi-star-fill"></i> Рекомендуем
+              </div>
+              <div class="ticket-card__header">
+                <span class="ticket-label">Стандарт</span>
+                <div class="ticket-price">
+                  <span class="ticket-price__amount">6 900</span>
+                  <span class="ticket-price__cur">₽</span>
+                </div>
+              </div>
+              <ul class="ticket-features">
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Все доклады и воркшопы</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Записи на 90 дней</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Доступ к закрытому чату</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Бумажные материалы + мерч</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Обеды оба дня</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Нетворкинг-ужин</li>
+                <li class="feat-no"><i class="bi bi-x-circle"></i> Ужин со спикерами</li>
+              </ul>
+              <a href="#register" class="btn btn-ticket-primary w-100">Выбрать тариф</a>
+            </div>
+          </div>
+
+          <!-- VIP -->
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <div class="ticket-card">
+              <div class="ticket-card__header">
+                <span class="ticket-label">VIP</span>
+                <div class="ticket-price">
+                  <span class="ticket-price__amount">14 900</span>
+                  <span class="ticket-price__cur">₽</span>
+                </div>
+              </div>
+              <ul class="ticket-features">
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Всё из «Стандарт»</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Записи без срока</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Приватный ужин со спикерами</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Места в первом ряду</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Воркшоп-сессии</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Менторская сессия 1 на 1</li>
+                <li class="feat-yes"><i class="bi bi-check2-circle"></i> Персональный бейдж</li>
+              </ul>
+              <a href="#register" class="btn btn-ticket-outline w-100">Выбрать тариф</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         CTA + REGISTRATION FORM SECTION
+    ═══════════════════════════════════════════ -->
+    <section class="section-block register-section" id="register">
+      <div class="container-xxl">
+        <div class="register-inner reveal">
+          <div class="row align-items-center g-5">
+
+            <!-- Left: CTA text -->
+            <div class="col-12 col-lg-6">
+              <div class="urgency-banner">
+                <i class="bi bi-lightning-charge-fill"></i>
+                Мест осталось ограниченное количество
+              </div>
+              <h2 class="register-title">
+                Зарегистрируйся<br>до повышения цен
+              </h2>
+              <p class="register-sub">
+                Более 800 участников уже купили билеты.<br>
+                Ранняя цена действует до 28 июня.
+              </p>
+              <div class="register-features">
+                <div class="reg-feat-item">
+                  <i class="bi bi-shield-check"></i>
+                  <span>Возврат билета в течение 14 дней</span>
+                </div>
+                <div class="reg-feat-item">
+                  <i class="bi bi-credit-card"></i>
+                  <span>Оплата картой, счёт для юридических лиц</span>
+                </div>
+                <div class="reg-feat-item">
+                  <i class="bi bi-envelope-check"></i>
+                  <span>Подтверждение на почту сразу после оплаты</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Form -->
+            <div class="col-12 col-lg-6">
+              <div class="register-form-wrap">
+
+                <div id="form-success" class="form-success-msg d-none" role="alert" aria-live="polite">
+                  <i class="bi bi-check-circle-fill"></i>
+                  <h3>Заявка отправлена!</h3>
+                  <p>Мы отправили подтверждение на вашу почту. До встречи 15 июля!</p>
+                </div>
+
+                <form id="registerForm" novalidate>
+
+                  <div class="mb-3">
+                    <label for="reg-name" class="form-label">Имя и фамилия *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-person"></i></span>
+                      <input type="text" class="form-control reg-input" id="reg-name"
+                        placeholder="Иван Иванов" required minlength="2" autocomplete="name" />
+                      <div class="invalid-feedback">Пожалуйста, введите имя (минимум 2 символа).</div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="reg-email" class="form-label">Email *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                      <input type="email" class="form-control reg-input" id="reg-email"
+                        placeholder="ivan@example.com" required autocomplete="email" />
+                      <div class="invalid-feedback">Введите корректный email-адрес.</div>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="reg-company" class="form-label">Компания</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-building"></i></span>
+                      <input type="text" class="form-control reg-input" id="reg-company"
+                        placeholder="Название компании" autocomplete="organization" />
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <label for="reg-ticket" class="form-label">Тип билета *</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-ticket-perforated"></i></span>
+                      <select class="form-select reg-input" id="reg-ticket" required>
+                        <option value="" disabled selected>Выберите тариф</option>
+                        <option value="online">Онлайн — 2 900 ₽</option>
+                        <option value="standard">Стандарт — 6 900 ₽</option>
+                        <option value="vip">VIP — 14 900 ₽</option>
+                      </select>
+                      <div class="invalid-feedback">Пожалуйста, выберите тип билета.</div>
+                    </div>
+                  </div>
+
+                  <div class="mb-4 form-check privacy-check">
+                    <input type="checkbox" class="form-check-input" id="reg-privacy" required />
+                    <label class="form-check-label" for="reg-privacy">
+                      Я согласен(на) с <a href="#privacy" class="priv-link">политикой конфиденциальности</a>
+                    </label>
+                    <div class="invalid-feedback">Необходимо согласие с политикой конфиденциальности.</div>
+                  </div>
+
+                  <button type="submit" class="btn btn-register-submit w-100" id="submitBtn">
+                    <span class="submit-text">Зарегистрироваться <i class="bi bi-arrow-right-circle-fill"></i></span>
+                    <span class="submit-loading d-none">
+                      <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Отправляем...
+                    </span>
+                  </button>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer" id="footer">
+    <div class="container-xxl">
+      <div class="footer-top">
+        <div class="row g-4">
+
+          <div class="col-12 col-md-4">
+            <a href="#" class="footer-logo">
+              <span class="logo-bracket">[</span>FF<span class="logo-year">26</span><span class="logo-bracket">]</span>
+            </a>
+            <p class="footer-desc">
+              Frontend Future — ежегодная конференция для frontend-разработчиков, UI/UX-дизайнеров и техлидов.
+            </p>
+            <div class="footer-socials">
+              <a href="#" class="social-btn" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+              <a href="#" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="social-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="#" class="social-btn" aria-label="VK"><i class="bi bi-vk"></i></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-2">
+            <h5 class="footer-heading">Навигация</h5>
+            <ul class="footer-links">
+              <li><a href="#program">Программа</a></li>
+              <li><a href="#speakers">Спикеры</a></li>
+              <li><a href="#tickets">Билеты</a></li>
+              <li><a href="#register">Регистрация</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2">
+            <h5 class="footer-heading">Партнёрам</h5>
+            <ul class="footer-links">
+              <li><a href="#">Стать спонсором</a></li>
+              <li><a href="#">Стать спикером</a></li>
+              <li><a href="#">СМИ</a></li>
+              <li><a href="#">Организаторам</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <h5 class="footer-heading">Контакты</h5>
+            <ul class="footer-contacts">
+              <li><i class="bi bi-envelope-at"></i> <a href="mailto:info@ff2026.ru">info@ff2026.ru</a></li>
+              <li><i class="bi bi-telephone"></i> <a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+              <li><i class="bi bi-geo-alt"></i> Москва, ЦМТ, пр-т Вернадского, 4</li>
+              <li><i class="bi bi-calendar-event"></i> 15–16 июля 2026</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom" id="privacy">
+        <p class="footer-copy">© 2026 Frontend Future. Все права защищены.</p>
+        <p class="footer-privacy">
+          <strong>Политика конфиденциальности:</strong> Мы собираем только те данные, которые необходимы для регистрации. Ваши данные не передаются третьим лицам без вашего согласия и хранятся в соответствии с законодательством РФ (ФЗ-152).
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
